@@ -133,6 +133,13 @@ main_menu() {
     elif [ $option = 3 ]
     then 
         ssh_window
+    elif [ $option = C ]
+    then 
+        echo "[*] Developer: a_i_da_n"
+        echo "[*] Usefull components libimobiledevice"
+        echo "[*] Usefull components rcg4u"
+        echo "[*] Original idea ConsoleLogLuke"
+        main_menu
     elif [ $option = X ]
     then
         echo "[-] Exiting program"
