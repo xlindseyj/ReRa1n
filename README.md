@@ -1,4 +1,4 @@
-How to use on **Debian** Linux:
+How to use on Linux (APT needs to be installed:
 
 git clone https://github.com/aidangamzer/rera1n.git
 
