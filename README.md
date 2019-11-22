@@ -7,7 +7,7 @@ git clone https://aidangamzer/ReRa1n
 
 cd ReRa1n
 
-sudo cp ReRa1n.sh /bin
+sudo cp ReRa1n.sh /usr/bin
 
 sudo chmod +x /bin/ReRa1n.sh
 
