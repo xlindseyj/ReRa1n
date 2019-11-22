@@ -9,7 +9,7 @@ cd ReRa1n
 
 sudo cp ReRa1n.sh /bin
 
-sudo chmod +wrxwrxwrx /bin/ReRa1n.sh
+sudo chmod +x /bin/ReRa1n.sh
 
 sudo apt-get update --fix-missing
 
