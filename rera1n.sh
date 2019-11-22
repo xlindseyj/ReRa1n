@@ -81,6 +81,7 @@ then
     sshpass -p$idevicepassword ssh root@$ideviceip cd /
     echo [*] Connected to iDevice
     # Declaring recovery and tool functions for WiFi
+    main_menu
 elif [ $wifiorusb = "USB" ]
 then
     echo [*] USB selected.
@@ -93,13 +94,14 @@ then
     ssh root@localhost -p 2222 exit
     sshpass -p$idevicepassword ssh root@localhost -p 2222 cd /
     echo "[*] Connected to iDevice"
+    main_menu
 elif [ $wifiorusb = "NONE" ]
 then
     echo "[-] This function is W.I.P"
-    echo "[*] Only available functions are Restore/Update - (NORMAL/DFU/RESTORE) and Reboot - (DFU/RESTORE)"
     echo "[*] Please select an option: "
     echo "[*] Restore/Update - (1)"
     echo "[*] Reboot - [DFU/RESTORE] - (2)"
+    echo "[*] iDeviceInfo V1.1 - Experimental (3)"
     read -p "[*] Select an option using the shortened option names" option
     if [ $option = "1" ]
     then
@@ -110,6 +112,25 @@ then
         irecovery -c reboot
         echo "[*] iDevice rebooting"
         exit
+    elif [ $option = 3 ] 
+    then 
+        ideviceinfo > ideviceinfo.txt
+        grep ActivationState: ideviceinfo.txt
+        grep BasebandVersion: ideviceinfo.txt
+        grep BluetoothAddress: ideviceinfo.txt
+        grep BuildVersion: ideviceinfo.txt
+        grep CPUArchitecture: ideviceinfo.txt
+        grep DeviceClass: ideviceinfo.txt
+        grep DeviceColor: ideviceinfo.txt
+        grep EthernetAddress: ideviceinfo.txt
+        grep FirmwareVersion: ideviceinfo.txt
+        grep HardwareModel: ideviceinfo.txt
+        grep HardwarePlatform: ideviceinfo.txt
+        grep PasswordProtected: ideviceinfo.txt
+        grep ProductType: ideviceinfo.txt
+        grep ProductVersion: ideviceinfo.txt
+        grep -w SerialNumber: ideviceinfo.txt
+        grep WiFiAddress: ideviceinfo.txt
     else 
         exit
     fi
@@ -199,6 +220,7 @@ tool_options() {
     echo  "[*] iDevice Info (2)"
     echo "[*] Install Packages - bundle indetifier required (3)"
     echo "[*] Remove Packages - bundle identifier required (4)"
+    echo "[*] iDevice Info V1.1 - Experimental (5)"
     echo "[*] Back to main menu (<)"
     read -p "[*] Select and option using the shortened option names: " option
     if [ $option = 3 ]
@@ -222,6 +244,26 @@ tool_options() {
     elif [ $option = "<" ]
     then
         main_menu
+    elif [ $option = 5 ] 
+    then 
+        ideviceinfo > ideviceinfo.txt
+        grep ActivationState: ideviceinfo.txt
+        grep BasebandVersion: ideviceinfo.txt
+        grep BluetoothAddress: ideviceinfo.txt
+        grep BuildVersion: ideviceinfo.txt
+        grep CPUArchitecture: ideviceinfo.txt
+        grep DeviceClass: ideviceinfo.txt
+        grep DeviceColor: ideviceinfo.txt
+        grep EthernetAddress: ideviceinfo.txt
+        grep FirmwareVersion: ideviceinfo.txt
+        grep HardwareModel: ideviceinfo.txt
+        grep HardwarePlatform: ideviceinfo.txt
+        grep PasswordProtected: ideviceinfo.txt
+        grep ProductType: ideviceinfo.txt
+        grep ProductVersion: ideviceinfo.txt
+        grep -w SerialNumber: ideviceinfo.txt
+        grep WiFiAddress: ideviceinfo.txt
+        main_menu
     else
         echo "[-] Unexpected option selected"
         exit
@@ -234,4 +276,4 @@ ssh_window() {
     echo "[*] Sucessfully exited SSH window"
     main_menu
 }
-main_menu
+
