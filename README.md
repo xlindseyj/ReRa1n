@@ -1,4 +1,5 @@
-Instructions for Linux (APT needs to be installed):
+# ReRa1n
+### Instructions for Linux (APT needs to be installed):
 1. git clone https://github.com/aidangamzer/rera1n.git
 2. cd rera1n
 3. sudo cp rera1n.sh /usr/bin
@@ -6,6 +7,7 @@ Instructions for Linux (APT needs to be installed):
 5. sudo apt-get update --fix-missing
 6. rera1n.sh
 
-Instructions for Windows (Coming soon):
+# ReRa1n GUI
+### Instructions for Windows (Coming soon):
 1. git clone https://github.com/xlindseyj/rera1n.git
 2. rerain.exe
