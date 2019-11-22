@@ -1,13 +1,11 @@
-How to use on Linux (APT needs to be installed:
+Instructions for Linux (APT needs to be installed):
+1. git clone https://github.com/aidangamzer/rera1n.git
+2. cd rera1n
+3. sudo cp rera1n.sh /usr/bin
+4. sudo chmod +x /usr/bin/rera1n.sh
+5. sudo apt-get update --fix-missing
+6. rera1n.sh
 
-git clone https://github.com/aidangamzer/rera1n.git
-
-cd rera1n
-
-sudo cp rera1n.sh /usr/bin
-
-sudo chmod +x /usr/bin/rera1n.sh
-
-sudo apt-get update --fix-missing
-
-rera1n.sh
+Instructions for Windows (Coming soon):
+1. git clone https://github.com/xlindseyj/rera1n.git
+2. rerain.exe
