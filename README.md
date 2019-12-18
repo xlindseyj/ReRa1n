@@ -1,5 +1,5 @@
 # ReRa1n
-### Instructions for Linux (APT needs to be installed):
+### Instructions for Linux:
 1. git clone https://github.com/aidangamzer/rera1n.git
 2. cd rera1n
 3. sudo cp rera1n.sh /usr/bin
